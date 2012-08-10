@@ -1,0 +1,21 @@
+Source: haivvreo
+Section: java
+Priority: optional
+Build-Depends: debhelper (>= 7)
+Build-Depends-Indep: maven2
+Maintainer: Matthew Callaway <mcallawa@genome.wustl.edu>
+Standards-Version: 3.8.3
+Homepage: http://search.cpan.org/dist/Object-Accessor/
+
+Package: haivvreo
+Architecture: all
+Depends: java
+Description: Haivvreo is a Hive Serde that LinkedIn has developed to process Avro-encoded data in Hive.
+ Haivvreo (pronounced with as many diphthongs as possible. Diphthongs are cool, like bowties.) is a Hive Serde that LinkedIn has developed to process Avro-encoded data in Hive.  Haivvreo's bullet points:
+ * Infers the schema of the Hive table from the Avro schema.* Reads all Avro files within a table against a specified schema, taking advantage of Avro's backwards compatibility abilities
+ * Supports arbitrarily nested schemas.
+ * Translates all Avro data types into equivalent Hive types.  Most types map exactly, but some Avro types don't exist in Hive and are automatically converted by Haivvreo.
+ * Understands compressed Avro files.
+ * Transparently converts the Avro idiom of handling nullable types as Union[T, null] into just T and returns null when appropriate.
+ * Writes any Hive table to Avro files.
+ * Has worked reliably against our most convoluted Avro schemas in our ETL process.

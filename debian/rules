@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	mvn clean package
+
+override_dh_auto_test:
+
+override_dh_auto_install:
+	install -D -m 0644 ./target/haivvreo-1.0.12-avro15-hive81-SNAPSHOT-jar-with-dependencies.jar ./debian/haivvreo/usr/share/hive/haivvreo-1.0.12-avro15-hive81-SNAPSHOT-jar-with-dependencies.jar
