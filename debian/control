@@ -9,7 +9,7 @@ Homepage: http://search.cpan.org/dist/Object-Accessor/
 
 Package: haivvreo
 Architecture: all
-Depends: java
+Depends: default-jdk (>= 1.6-34)
 Description: Haivvreo is a Hive Serde that LinkedIn has developed to process Avro-encoded data in Hive.
  Haivvreo (pronounced with as many diphthongs as possible. Diphthongs are cool, like bowties.) is a Hive Serde that LinkedIn has developed to process Avro-encoded data in Hive.  Haivvreo's bullet points:
  * Infers the schema of the Hive table from the Avro schema.* Reads all Avro files within a table against a specified schema, taking advantage of Avro's backwards compatibility abilities
